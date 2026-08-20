@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+<defs>
+<radialGradient id="b"><stop stop-color="#071a32"/><stop offset=".65" stop-color="#020814"/><stop offset="1" stop-color="#01040b"/></radialGradient>
+<pattern id="g" width="55" height="55" patternUnits="userSpaceOnUse"><path d="M55 0H0V55" fill="none" stroke="#00d9ff" stroke-opacity=".06"/></pattern>
+<filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#b)"/><rect width="1600" height="900" fill="url(#g)"/>
+<g fill="none" stroke="#00d9ff" stroke-opacity=".28" stroke-width="2">
+<path d="M0 650C240 510 300 700 510 545S820 380 1020 510s300 160 580-90"/>
+<path d="M0 220C230 320 330 110 560 250s360 180 590 0s300-80 450 20"/>
+<path d="M160 0V180H340V360H520V520M1430 900V710H1260V520H1080V350"/>
+</g>
+<g fill="#00d9ff" filter="url(#glow)"><circle cx="160" cy="180" r="5"/><circle cx="340" cy="180" r="5"/><circle cx="520" cy="360" r="5"/><circle cx="1020" cy="510" r="6"/><circle cx="1260" cy="710" r="5"/></g>
+<g transform="translate(800 450)" fill="none" stroke="#00d9ff" filter="url(#glow)">
+<circle r="150" stroke-opacity=".12" stroke-width="2"/><circle r="105" stroke-opacity=".22" stroke-width="2"/><circle r="60" stroke-opacity=".55" stroke-width="2"/>
+<path d="M-60 0H60M0-60V60M-42-42L42 42M42-42L-42 42" stroke-opacity=".3"/>
+</g>
+<text x="800" y="780" text-anchor="middle" fill="#00d9ff" opacity=".18" font-family="Arial" font-size="54" font-weight="700" letter-spacing="8">NETWORK SECURITY</text>
+<text x="800" y="825" text-anchor="middle" fill="#0066ff" opacity=".15" font-family="Arial" font-size="18" letter-spacing="4">NETWORK MONITORING</text>
+<rect width="1600" height="900" fill="none" stroke="#00d9ff" stroke-opacity=".08" stroke-width="2"/>
+</svg>

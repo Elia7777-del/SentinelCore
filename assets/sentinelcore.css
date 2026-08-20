@@ -1,0 +1,71 @@
+
+.stApp {
+  background:
+    linear-gradient(rgba(2,8,20,.90), rgba(2,8,20,.94)),
+    url("../assets/cyber-bg.svg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+.stApp::after {
+  content:"";
+  position:fixed; inset:0;
+  background-image:
+    linear-gradient(rgba(0,180,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,180,255,.025) 1px, transparent 1px);
+  background-size:42px 42px;
+  pointer-events:none; z-index:0;
+}
+[data-testid="stAppViewContainer"] { position:relative; z-index:1; }
+[data-testid="stSidebar"] {
+  background:linear-gradient(rgba(2,8,20,.96),rgba(2,8,20,.97)),
+  url("../assets/cyber-bg.svg");
+  background-size:cover;
+  border-right:1px solid rgba(0,217,255,.25);
+}
+.cyber-panel {
+  background:rgba(4,15,30,.78);
+  border:1px solid rgba(0,217,255,.30);
+  border-radius:14px;
+  padding:20px;
+  margin:8px 0 18px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 0 24px rgba(0,140,255,.08);
+}
+.cyber-title {
+  color:#00d9ff; font-size:38px; font-weight:800;
+  letter-spacing:3px;
+  text-shadow:0 0 6px rgba(0,217,255,.85),0 0 18px rgba(0,217,255,.45);
+}
+.cyber-subtitle { color:#9db4ca; font-size:13px; letter-spacing:2px; }
+.status-online { color:#00ff9d; font-weight:700; }
+.status-warning { color:#ffd000; font-weight:700; }
+.status-danger { color:#ff3b5c; font-weight:700; }
+[data-testid="stMetric"] {
+  background:rgba(4,18,35,.78);
+  border:1px solid rgba(0,180,255,.25);
+  border-radius:12px; padding:15px;
+}
+.stButton > button {
+  background:rgba(0,140,210,.12);
+  color:#00d9ff;
+  border:1px solid rgba(0,217,255,.45);
+  border-radius:8px;
+}
+.stButton > button:hover {
+  background:rgba(0,217,255,.15);
+  border-color:#00d9ff;
+  box-shadow:0 0 15px rgba(0,217,255,.35);
+}
+.sc-scanline {
+  position:fixed; left:0; right:0; top:0; height:2px;
+  background:rgba(0,217,255,.18);
+  box-shadow:0 0 12px rgba(0,217,255,.35);
+  animation:scscan 8s linear infinite;
+  pointer-events:none; z-index:9999;
+}
+@keyframes scscan {
+  0%{top:0;opacity:0} 8%{opacity:1} 92%{opacity:1}
+  100%{top:100%;opacity:0}
+}

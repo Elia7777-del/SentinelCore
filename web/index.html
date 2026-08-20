@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="SentinelCore Security Operations Platform">
+  <title>SentinelCore — Security Operations</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">SC</div>
+      <div><strong>SentinelCore</strong><span>Security Operations Platform</span></div>
+    </div>
+    <div class="top-actions">
+      <span class="status"><i></i> API STATUS: <b id="apiStatus">CHECKING</b></span>
+      <button onclick="openAPISettings()" aria-label="Configure API">API</button><button id="themeBtn" aria-label="Toggle theme">◐</button>
+    </div>
+  </header>
+
+  <aside class="sidebar">
+    <nav>
+      <a class="active" href="#overview">◈ Overview</a>
+      <a href="#incidents">⚠ Incidents</a>
+      <a href="#assets">▣ Assets</a>
+      <a href="#events">⌁ Events</a>
+      <a href="#threats">◎ Threat Intelligence</a>
+      <a href="#agents">◉ Agents</a>
+      <a href="#audit">▤ Audit</a><a href="#compliance">✓ Compliance</a>
+      <a href="#settings">⚙ Settings</a><a href="#onboarding">＋ Onboarding</a>
+    </nav>
+    <div class="sidebar-foot">24/7 DEFENSIVE MONITORING<br><small>Authorized environments only</small></div>
+  </aside>
+
+  <main class="content" id="overview">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">SECURITY OPERATIONS CENTER</p>
+        <h1>Cybersecurity Command Center</h1>
+        <p>Monitor, detect, investigate, contain and report security activity across authorized organizations and remote endpoints.</p>
+      </div>
+      <button class="primary" onclick="location.hash='incidents'">Open Incidents</button>
+    </section>
+
+    <section class="metrics">
+      <article><span>Critical Incidents</span><strong id="critical">3</strong><small>Requires attention</small></article>
+      <article><span>High Risk Events</span><strong id="high">17</strong><small>Last 24 hours</small></article>
+      <article><span>Protected Assets</span><strong id="assetsCount">1,284</strong><small>Across organizations</small></article>
+      <article><span>Connected Agents</span><strong id="agentsCount">96</strong><small>Healthy: 91</small></article>
+    </section>
+
+    <section class="grid">
+      <article class="panel wide">
+        <div class="panel-head"><h2>Threat Activity</h2><span>LIVE</span></div>
+        <div class="chart">
+          <div class="bars">
+            <i style="height:28%"></i><i style="height:44%"></i><i style="height:34%"></i>
+            <i style="height:62%"></i><i style="height:48%"></i><i style="height:78%"></i>
+            <i style="height:57%"></i><i style="height:88%"></i><i style="height:64%"></i>
+            <i style="height:72%"></i><i style="height:51%"></i><i style="height:92%"></i>
+          </div>
+          <div class="axis"><span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>Now</span></div>
+        </div>
+      </article>
+
+      <article class="panel" id="incidents">
+        <div class="panel-head"><h2>Priority Incidents</h2><span>3 ACTIVE</span></div>
+        <div class="incident"><b>CRITICAL</b><p>Repeated privileged authentication anomaly</p><small>Endpoint SC-042 · 2 min ago</small></div>
+        <div class="incident"><b>HIGH</b><p>Suspicious outbound connection</p><small>Server SC-117 · 8 min ago</small></div>
+        <div class="incident"><b>HIGH</b><p>Malware indicator detected</p><small>Endpoint SC-083 · 14 min ago</small></div>
+      </article>
+
+      <article class="panel" id="assets">
+        <div class="panel-head"><h2>Asset Risk</h2><span>1,284</span></div>
+        <div class="risk-row"><span>Critical</span><div><i style="width:9%"></i></div><b>12</b></div>
+        <div class="risk-row"><span>High</span><div><i style="width:27%"></i></div><b>81</b></div>
+        <div class="risk-row"><span>Medium</span><div><i style="width:54%"></i></div><b>416</b></div>
+        <div class="risk-row"><span>Low</span><div><i style="width:86%"></i></div><b>775</b></div>
+      </article>
+
+      <article class="panel wide" id="events">
+        <div class="panel-head"><h2>Security Event Stream</h2><span>AUTO REFRESH</span></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Time</th><th>Severity</th><th>Source</th><th>Event</th><th>Status</th></tr></thead>
+            <tbody id="eventsTable">
+              <tr><td>19:42:18</td><td><b class="critical">CRITICAL</b></td><td>Endpoint</td><td>Privilege escalation pattern</td><td>Investigating</td></tr>
+              <tr><td>19:41:52</td><td><b class="high">HIGH</b></td><td>Firewall</td><td>Blocked suspicious destination</td><td>Contained</td></tr>
+              <tr><td>19:40:31</td><td><b class="medium">MEDIUM</b></td><td>Identity</td><td>Unusual login context</td><td>Triaged</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel" id="compliance" style="margin-top:16px">
+      <div class="panel-head"><h2>Security Framework Alignment</h2><span>NIST CSF 2.0</span></div>
+      <p style="color:#8ea6ba;font-size:12px;line-height:1.7">
+      Govern · Identify · Protect · Detect · Respond · Recover
+      </p>
+      <p style="color:#60798d;font-size:10px">Framework alignment is a design aid, not a certification claim.</p>
+    </section>
+    <section class="footer-note">
+      SentinelCore decisions are policy-controlled. High-impact containment should require the authorization level configured by the deploying organization.
+    </section>
+  </main>
+  <script src="assets/app.js"></script>
+</body>
+</html>
